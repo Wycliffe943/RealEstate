@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\Backend\PropertyTypeController;
+use App\Http\Controllers\Backend\RoleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,13 +59,25 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::post('/update/type', 'UpdateType')->name('update.type');
         Route::get('/all/type/{id}', 'DeleteType')->name('delete.type');
    }); 
-}); 
+ 
 
-Route::controller(PropertyTypeController::class)->group(function(){
-    Route::get('/all/amenities', 'AllAmenities')->name('all.amenities');
-    Route::get('/add/amenity', 'AddAmenity')->name('add.amenity');
-    Route::post('/store/amenity', 'StoreAmenity')->name('store.amenity');
-    Route::get('/edit/amenity/{id}', 'EditAmenity')->name('edit.amenity');
-    Route::post('/update/amenity', 'UpdateAmenity')->name('update.amenity');
-    Route::get('/delete/amenity/{id}', 'DeleteAmenity')->name('delete.amenity');
-});
+    Route::controller(PropertyTypeController::class)->group(function(){
+        Route::get('/all/amenities', 'AllAmenities')->name('all.amenities');
+        Route::get('/add/amenity', 'AddAmenity')->name('add.amenity');
+        Route::post('/store/amenity', 'StoreAmenity')->name('store.amenity');
+        Route::get('/edit/amenity/{id}', 'EditAmenity')->name('edit.amenity');
+        Route::post('/update/amenity', 'UpdateAmenity')->name('update.amenity');
+        Route::get('/delete/amenity/{id}', 'DeleteAmenity')->name('delete.amenity');
+    });
+
+/// Permission all route
+    Route::controller(RoleController::class)->group(function(){
+        Route::get('/all/permission', 'AllPermission')->name('all.permission');
+        Route::get('/add/permission', 'AddPermission')->name('add.permission');
+        Route::post('/store/permission', 'StorePermission')->name('store.permission');
+        Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
+        Route::post('/update/type', 'UpdateType')->name('update.type');
+        Route::get('/all/type/{id}', 'DeleteType')->name('delete.type');
+    }); 
+
+}); // End group admin Middleware
