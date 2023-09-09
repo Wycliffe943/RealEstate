@@ -82,20 +82,21 @@
                     <a href="{{ route('all.roles') }}" class="nav-link">All Roles</a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('add.roles.permission') }}" class="nav-link">Role in Permission</a>
+                    <a href="{{ route('add.roles.permission') }}" class="nav-link">Assign Role To Permission</a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('all.roles.permission') }}" class="nav-link">All Roles And Their Permissions</a>
+                    <a href="{{ route('all.roles.permission') }}" class="nav-link">All Roles And Permissions</a>
                   </li>
                 </ul>
 
+                <li class="nav-item nav-category">ADMIN MANAGEMENT PORTAL</li>
                 <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="advancedUI">
-              <i class="link-icon" data-feather="anchor"></i>
-              <span class="link-title">Manage Admin User</span>
-              <i class="link-arrow" data-feather="chevron-down"></i>
-            </a>
-            <div class="collapse" id="admin">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="advancedUI">
+                    <i class="link-icon" data-feather="anchor"></i>
+                    <span class="link-title">Manage Admin User</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+              <div class="collapse" id="admin">
               <ul class="nav sub-menu">
                   <li class="nav-item">
                     <a href="{{ route('all.admin') }}" class="nav-link">All Admin</a>
