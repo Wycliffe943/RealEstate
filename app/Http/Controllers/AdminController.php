@@ -16,7 +16,7 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function AdminLogout(Request $request)
+    public function AdminLogout(Request $request) 
     {
         Auth::guard('web')->logout();
 

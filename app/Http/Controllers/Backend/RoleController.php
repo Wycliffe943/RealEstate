@@ -126,7 +126,7 @@ class RoleController extends Controller
 
     ///Add Role Permission all
 
-    public function AddRolesPermission(){
+    public function AddRolesPermission(){ 
         $roles = Role::all();
         $permissions = Permission::all();
         $permission_groups = User::getpermissionGroups();

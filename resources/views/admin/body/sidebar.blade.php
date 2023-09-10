@@ -20,7 +20,7 @@
           </li>
           <li class="nav-item nav-category">My Business</li>
           
-          @if(Auth::user()->can('type.menu'))
+        
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
               <i class="link-icon" data-feather="mail"></i>
@@ -30,21 +30,21 @@
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
 
-              @if(Auth::user()->can('all.type'))
+              
                 <li class="nav-item">
                   <a href="{{ route('all.type') }}" class="nav-link">All Types</a>
                 </li>
-              @endif
-              @if(Auth::user()->can('add.type'))
+              
+              
                 <li class="nav-item">
                   <a href="{{ route('add.type') }}" class="nav-link">Add Type</a>
                 </li>
-              @endif
+            
 
               </ul>
             </div>
           </li>
-          @endif 
+      
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#amenitie" role="button" aria-expanded="false" aria-controls="emails">

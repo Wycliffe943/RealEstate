@@ -35,7 +35,7 @@
                             <option value="{{$role->id}}">{{$role->name}}</option>
                             @endforeach()
                         </select>
-                    </div>
+                    </div> 
 
                     <div class="form-check mb-2">
                       <input type="checkbox" class="form-check-input" id="checkDefaultmain">
