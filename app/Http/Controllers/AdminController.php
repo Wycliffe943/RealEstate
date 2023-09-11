@@ -104,11 +104,11 @@ class AdminController extends Controller
     // Admin User all methods
 
     public function AllAdmin(){
-        $allAdmin = User::all();
-        
+        $users = User::with('roles')->latest()->get();
+        //dd($users->toArray());
         //$allAdmin = User::where('role','admin')->get();
         //$allAdmin = Role::where('name','admin')->get();
-        return view('backend.pages.admin.all_admin', compact('allAdmin'));
+        return view('backend.pages.admin.all_admin', compact('users'));
     }
 
     public function AddAdmin(){
@@ -117,6 +117,7 @@ class AdminController extends Controller
     }
 
     public function StoreAdmin(Request $request) {
+        // dd($request->toArray());
         $user = new User();
         $user->username = $request->username;
         $user->name = $request->name;
@@ -124,7 +125,6 @@ class AdminController extends Controller
         $user->phone = $request->phone;
         $user->address = $request->address;
         $user->password = Hash::make($request->password);
-        $user->role = 'admin';
         $user->status = 'active';
         $user->save();
 
