@@ -104,7 +104,10 @@ class AdminController extends Controller
     // Admin User all methods
 
     public function AllAdmin(){
-        $allAdmin = User::where('role','admin')->get();
+        $allAdmin = User::all();
+        
+        //$allAdmin = User::where('role','admin')->get();
+        //$allAdmin = Role::where('name','admin')->get();
         return view('backend.pages.admin.all_admin', compact('allAdmin'));
     }
 
@@ -151,7 +154,6 @@ class AdminController extends Controller
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->address = $request->address;
-        $user->role = 'admin';
         $user->status = 'active';
         $user->save();
 

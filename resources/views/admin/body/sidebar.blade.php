@@ -66,7 +66,7 @@
           
     
 
-          <li class="nav-item nav-category">Roles $ Permissions</li>
+          <li class="nav-item nav-category">User Management</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
               <i class="link-icon" data-feather="anchor"></i>
@@ -89,7 +89,7 @@
                   </li>
                 </ul>
 
-                <li class="nav-item nav-category">ADMIN MANAGEMENT PORTAL</li>
+                
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="advancedUI">
                     <i class="link-icon" data-feather="anchor"></i>
